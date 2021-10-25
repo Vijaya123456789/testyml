@@ -1,0 +1,18 @@
+general:
+  cpiApiServiceKeyCredentialsId: "cpi-test"
+  integrationFlowId: "CICD_TestFlow"
+stages:
+  uploadStage:
+    enabled: true
+  deployStage:
+    enabled: true
+  integrationTestStage:
+    enabled: true
+steps:
+  integrationArtifactUpload:
+    packageId: "CICDTest"
+    integrationFlowName: "CICD_TestFlow"
+  integrationArtifactTriggerIntegrationTest:
+    contentType: ""
+    messageBodyPath: ""
+    iFlowServiceKeyCredentialsId: "cpi-test"
